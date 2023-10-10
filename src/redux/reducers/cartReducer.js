@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, EMPTY_CART } from "./constants";
+import { ADD_TO_CART, REMOVE_FROM_CART, EMPTY_CART } from "../constants";
 
 // A reducer for all the CRUD operations for cart
 export const cartData = (initialData = [], action) => {

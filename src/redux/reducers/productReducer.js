@@ -9,6 +9,8 @@ export const productData = (initialData = [], action) => {
 
       // to culminate the previous data too, returning an array by destructuring the previous data.
       return [action.data, ...initialData];
+      // return action.data;
+
 
     default:
       console.warn(action.type, " !!! Action not matched");

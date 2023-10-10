@@ -144,3 +144,12 @@ Project steps :
 - But Redux has `useSelector` hook to deal with states
 
 ---
+
+## Saga : 
+
+- If any API calls are made inside the action and this action creator function returns the response of that API then the following error can appear :
+```bash
+redux.js:275 Uncaught Error: Actions must be plain objects. Instead, the actual type was: 'Promise'. You may need to add middleware to your store setup to handle dispatching other values, such as 'redux-thunk' to handle dispatching functions.
+```
+- This means the redux didn't stop for the async await syntax for API response.
+- Theefore, a middleware is needed to handle this.

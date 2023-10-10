@@ -18,6 +18,7 @@ function App() {
     <div>
       <button type="button" onClick={() => dispatch(addToCart(product))}>Add</button>
     </div>
+    <summary>(Logs are in console.warn)</summary>
     </>
   )
 }

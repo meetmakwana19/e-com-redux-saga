@@ -67,6 +67,7 @@ export const incNumber = (num) => {
 #### **REDUCER**
 
 - A reducer is a function that determines changes to an application's state, return the new state and tell the store how to do.
+- Reducer handles data for store
 
 ```bash
 ACTION ---→	 REDUCER ---→ STORE
@@ -76,6 +77,10 @@ ACTION ---→	 REDUCER ---→ STORE
 ```
 
 - Reducers are functions that take `current state` and an `action` both as arguements and return a `new state`.
+- Rules : 
+  - Always need a root reducer for creating store.
+  - Reducer must have some initial value.
+  - Reducer must have a `return` statement and must return something.
 - Example : Fruit making machine with 3 parts like redux which are : 1. Action(moving the handle), 2. Reducer(machine crushing fruit), 3. State(Juice result)
 
 #### **REDUX STORE**

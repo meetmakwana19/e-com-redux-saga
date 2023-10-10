@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { addToCart } from "./redux/action";
+import { addToCart, dummyAction } from "./redux/action";
 import { useDispatch } from 'react-redux';
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
     <>
     <div>
       <button type="button" onClick={() => dispatch(addToCart(product))}>Add</button>
+      <button type="button" onClick={() => dispatch(dummyAction(product))}>Dummy Action</button>
     </div>
     <summary>(Logs are in console.warn)</summary>
     </>

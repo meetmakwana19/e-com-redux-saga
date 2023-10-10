@@ -1,19 +1,23 @@
-import { ADD_TO_CART } from "./constants";
+import { ADD_TO_CART, REMOVE_TO_CART } from "./constants";
 
 // A reducer for all the CRUD operations for cart
 export const cartData = (initialData = [], action) => {
   // Reducer must have some initial value
 
   // We need some condition as on one dispatched action, other reducers can also be called like the following cartData2 
-  // so adding if conditions
+  // so adding switch case
 
-  if(action.type === ADD_TO_CART){
+  switch(action.type){
+    case ADD_TO_CART:
       console.warn("Action recieved in reducer : ", action);
       return action.info;
-  }
-  else{
-    console.warn(action.type, " !!! Action not matched");
-    return "No action matched."
+    case REMOVE_TO_CART:
+      console.warn("Action recieved in reducer : ", action);
+      return action.info;
+    default:
+      console.warn(action.type, " !!! Action not matched");
+      return "No action matched."
+
   }
 };
 

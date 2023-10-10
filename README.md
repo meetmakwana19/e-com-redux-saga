@@ -81,6 +81,7 @@ ACTION ---→	 REDUCER ---→ STORE
   - Always need a root reducer for creating store.
   - Reducer must have some initial value.
   - Reducer must have a `return` statement and must return something.
+- Usually `switch` case is used in reducer to filter the action types as `if` blocks are not suitable for lots of cases. One might not be very certain that how many actions would be created in future for that one reducer.
 - Example : Fruit making machine with 3 parts like redux which are : 1. Action(moving the handle), 2. Reducer(machine crushing fruit), 3. State(Juice result)
 
 #### **REDUX STORE**

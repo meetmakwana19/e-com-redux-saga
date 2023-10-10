@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_TO_CART } from "./constants";
+import { ADD_TO_CART, REMOVE_FROM_CART, EMPTY_CART } from "./constants";
 
 // A reducer for all the CRUD operations for cart
 export const cartData = (initialData = [], action) => {
@@ -14,9 +14,16 @@ export const cartData = (initialData = [], action) => {
       // to culminate the previous data too, returning an array by destructuring the previous data.
       return [action.info, ...initialData];
 
-    case REMOVE_TO_CART:
+    case REMOVE_FROM_CART:
       console.warn("Action recieved in reducer : ", action);
-      return action.info;
+      // initialData.length = initialData.length - 1;
+      initialData.pop();
+      return [...initialData];
+
+    case EMPTY_CART:
+      console.warn("Action recieved in reducer : ", action);
+      initialData = []
+      return [...initialData];
 
     default:
       console.warn(action.type, " !!! Action not matched");

@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "./constants";
+import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART } from "./constants";
 
 export const addToCart = (data) => {
     console.warn("action called with data : ", data);
@@ -8,6 +8,21 @@ export const addToCart = (data) => {
             "extra": "Cart info",
             ...data,
         }
+    }
+}
+export const removeFromCart = (data) => {
+    console.warn("removeFromCart called with data : ", data);
+    return {
+        type: REMOVE_FROM_CART,
+        info: {
+            "extra": "Cart info",
+            ...data,
+        }
+    }
+}
+export const emptyCart = () => {
+    return {
+        type: EMPTY_CART,
     }
 }
 

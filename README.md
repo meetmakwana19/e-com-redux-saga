@@ -38,7 +38,7 @@ Three basic imp parts :
 
 - An action is a **plain JS object** that describes the intention to cause change(Like ordering something on a button click)
 - It has the responsibility to get data from ReactJS UI and pass to the Redux's reducer to put that data into store.
-- Action can itself modify data because reducer cant do logic work.
+- Action can itself optionally but rarely modify data because reducer cant do logic work.
   - An action must have a `type` field like `{ type : 'ORDER' }`
     - So the action and reducer communicates via this `type` key as identifier.
   - Tells what to do but doesnt tell how to do

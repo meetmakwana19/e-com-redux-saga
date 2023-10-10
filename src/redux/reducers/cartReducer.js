@@ -17,8 +17,11 @@ export const cartData = (initialData = [], action) => {
     case REMOVE_FROM_CART:
       console.warn("Action recieved in reducer : ", action);
       // initialData.length = initialData.length - 1;
-      initialData.pop();
-      return [...initialData];
+      // initialData.pop();
+
+      const remainingData = initialData.filter((item) => item.id !== action.data)
+      console.warn("Remaining : ", remainingData);
+      return [...remainingData];
 
     case EMPTY_CART:
       console.warn("Action recieved in reducer : ", action);

@@ -1,7 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { addToCart, dummyAction, emptyCart, removeFromCart } from "../redux/actions/cartAction";
-import { productList } from "../redux/actions/productAction";
+import { dummyAction, emptyCart } from "../redux/actions/cartAction";
 import Products from "./Products";
 
 export default function Main() {

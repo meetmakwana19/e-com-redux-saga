@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function Header() {
   // state passed in the callback function is the complete store's state
   const result = useSelector((state) => state.cartData);
-  console.warn("Result : ", result.length);
+  console.warn("Result : ", result);
 
   return (
     <Navbar className="bg-body-tertiary" bg="dark" data-bs-theme="dark">

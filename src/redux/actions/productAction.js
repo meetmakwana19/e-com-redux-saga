@@ -1,17 +1,10 @@
-import { PRODUCT_LIST } from "../constants";
+import { PRODUCT_LIST, SET_PRODUCT_LIST } from "../constants";
 
-export const productList = async () => {
+export const productList = () => {
   // let data = "hello";
-  let data = await fetch(`https://fakestoreapi.com/products`);
-  data = await data.json();
-  console.warn("API data : ", data);
-
-
-  console.warn("Get Product ", data);
-
+  console.warn("I am productList action");
   return {
     type: PRODUCT_LIST,
-    data: [data],
     // data,
   };
 };

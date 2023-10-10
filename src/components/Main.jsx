@@ -1,7 +1,8 @@
 import { Button } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart, dummyAction, emptyCart, removeFromCart } from "../redux/actions/cartAction";
 import { productList } from "../redux/actions/productAction";
+import Products from "./Products";
 
 export default function Main() {
   const dispatch = useDispatch();
@@ -10,22 +11,10 @@ export default function Main() {
     price: "1L",
     color: "Black",
   };
-  const data = useSelector((state) => state.productData);
-  console.warn("Data in main component : ", data);
 
   return (
     <div className="main">
       <div>
-        <Button variant="primary" onClick={() => dispatch(addToCart(product))}>
-          Add
-        </Button>{" "}
-        <br />
-        <br />
-        <Button variant="secondary" onClick={() => dispatch(removeFromCart(product))}>
-          Remove
-        </Button>{" "}
-        <br />
-        <br />
         <Button variant="danger" onClick={() => dispatch(emptyCart())}>
           Empty Cart
         </Button>{" "}
@@ -39,14 +28,15 @@ export default function Main() {
         </Button>{" "}
         <br />
         <br />
-        <Button
+        {/* <Button
           variant="success"
           onClick={() => dispatch(productList())}
         >
           Get Product List
-        </Button>{" "}
+        </Button>{" "} */}
       </div>
       <p>(Logs are in console.warn)</p>
+      <Products/>
     </div>
   );
 }

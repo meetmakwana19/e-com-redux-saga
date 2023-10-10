@@ -4,26 +4,33 @@ import { ADD_TO_CART, REMOVE_TO_CART } from "./constants";
 export const cartData = (initialData = [], action) => {
   // Reducer must have some initial value
 
-  // We need some condition as on one dispatched action, other reducers can also be called like the following cartData2 
+  // We need some condition as on one dispatched action, other reducers can also be called like the following cartData2
   // so adding switch case
 
-  switch(action.type){
+  switch (action.type) {
     case ADD_TO_CART:
       console.warn("Action recieved in reducer : ", action);
-      return action.info;
+
+      // to culminate the previous data too, returning an array by destructuring the previous data.
+      return [action.info, ...initialData];
+
     case REMOVE_TO_CART:
       console.warn("Action recieved in reducer : ", action);
       return action.info;
+
     default:
       console.warn(action.type, " !!! Action not matched");
-      return "No action matched."
-
+      // sending initialData if no match found
+      return initialData;
   }
 };
 
 // non matching action types will be passed through this reducer but with different data.
 export const cartData2 = (initialData = [], action) => {
   // Reducer must have some initial value
-  console.warn("***** Action recieved in reducer 2 : ", { hello: "hello", ...action });
+  console.warn("***** Action recieved in reducer 2 : ", {
+    hello: "hello",
+    ...action,
+  });
   return "abc";
 };

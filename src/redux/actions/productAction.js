@@ -9,9 +9,9 @@ export const productList = () => {
   };
 };
 
-export const sortProducts = () => {
-  console.warn("Sorting !!");
-  let data = "hello"
+export const sortProducts = (data) => {
+  console.warn("Sorting !! ", data);
+  // let data = "hello"
   return {
     type: SORT_PRODUCTS,
     data,

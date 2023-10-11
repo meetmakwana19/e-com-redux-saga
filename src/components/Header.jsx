@@ -12,9 +12,7 @@ function Header() {
   return (
     <Navbar className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">
-          <Link to="/" className="link">React-Redux & Saga</Link>
-        </Navbar.Brand>
+        <Navbar.Brand href="/">React-Redux & Saga</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>

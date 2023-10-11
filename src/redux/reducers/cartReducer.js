@@ -11,6 +11,7 @@ export const cartData = (initialData = [], action) => {
     case ADD_TO_CART:
       console.warn("Action recieved in reducer : ", action);
 
+      alert(action.type + " called in Reducer.")
       // to culminate the previous data too, returning an array by destructuring the previous data.
       return [action.info, ...initialData];
 
@@ -25,6 +26,7 @@ export const cartData = (initialData = [], action) => {
 
     case EMPTY_CART:
       console.warn("Action recieved in reducer : ", action);
+      alert(action.type + " called in reducer")
       initialData = []
       return [...initialData];
 

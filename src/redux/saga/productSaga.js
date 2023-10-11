@@ -11,16 +11,17 @@ function* getProducts() {
   let data = yield fetch(`https://fakestoreapi.com/products`);
   data = yield data.json();
   console.warn("API data : ", data);
-
+  alert("Products fetched using Saga")
   yield put({ type: SET_PRODUCT_LIST, data });
 }
 
 function* sortingCall(action) {
   console.warn("Sort API Calling ** ", action);
-
+  
   let data = yield fetch(`https://fakestoreapi.com/products?sort=${action.data}`);
   data = yield data.json();
   console.warn("Sorted API data : ", data);
+  alert("Products sorted using Saga")
 
   yield put({ type: SET_PRODUCT_LIST, data });
 }

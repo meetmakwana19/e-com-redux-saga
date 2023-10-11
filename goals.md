@@ -3,4 +3,4 @@
 - [x] Used saga to make API calls
 - [x] Used Generator functions for making saga
 - [x] Used `yeild` to demonstrate async behaviour in saga.
-- [ ] Deploy on aws
+- [x] Deploy on aws

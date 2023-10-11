@@ -12,15 +12,15 @@ export default function Main() {
   };
 
   return (
-    <div className="main">
-      <div>
+    <div className="main d-flex flex-column align-items-end">
+      <div className="action-buttons d-flex flex-column">
         <Button variant="danger" onClick={() => dispatch(emptyCart())}>
           Empty Cart
         </Button>{" "}
         <br />
         <br />
         <Button
-          variant="info"
+          variant="primary"
           onClick={() => dispatch(dummyAction(product))}
         >
           Dummy Action
@@ -34,7 +34,6 @@ export default function Main() {
           Get Product List
         </Button>{" "} */}
       </div>
-      <p>(Logs are in console.warn)</p>
       <Products/>
     </div>
   );

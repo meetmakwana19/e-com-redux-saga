@@ -1,5 +1,5 @@
 .main {
-  margin: 10% 5%;
+  margin: 5%;
 }
 
 .product1 {
@@ -11,4 +11,18 @@
 .link{
   text-decoration: none!important;
   color: white!important;
+}
+
+.cart-container table{
+  width: 80%;
+}
+
+td{
+  padding: 1rem;
+  border: 1px solid gray!important;
+}
+
+.price-details{
+  height: 50%;
+  width: 20%;
 }
